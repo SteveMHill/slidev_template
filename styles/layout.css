@@ -1,0 +1,49 @@
+:root {
+  --slidev-theme-primary: #3e5166;
+  --slidev-theme-secondary: #34d399;
+  --custom-main-font: 'Arial, sans-serif'; /* Replace with your desired font */
+}
+
+html.dark {
+  --custom-admon-bg-color: #4b5563; /* Dark mode background */
+  --custom-admon-text-color: #f3f4f6; /* Dark mode text */
+  --custom-admon-border-color: #9ca3af; /* Dark mode border */
+}
+
+html:not(.dark) #slide-content {
+  @apply bg-white text-primary;
+}
+
+#slide-container {
+  height: 100% !important;
+}
+
+.slidev-layout {
+  @apply relative h-full;
+  font-size: 15px;
+
+  h1 {
+    @apply mb-8 mt-0;
+    margin-top: 2rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-bold;
+  }
+
+  a {
+    @apply text-secondary-400 hover:text-secondary-500 dark:text-gray-50 dark:hover:text-secondary-500 transition ease-in-out duration-300;
+  }
+
+  img {
+    border-radius: 5px;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+}

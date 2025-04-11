@@ -1,0 +1,72 @@
+/* Default Admonition Styles */
+.admonition {
+    padding: 8px 16px;
+    margin: 10px;
+    margin-left: 0;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    color: inherit;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-family: var(--custom-main-font);
+    font-size: 0.85rem;
+  }
+  
+  .admonition p {
+    margin: 0;
+    margin-bottom: 2px;
+  }
+  
+  .admonition > :first-child {
+    margin-top: 0;
+  }
+  
+  .admonition > :last-child {
+    margin-bottom: 0;
+  }
+  
+  .admonition.admonition-custom {
+    background-color: var(--custom-admon-bg-color);
+    color: var(--custom-admon-text-color);
+    border: 1px solid var(--custom-admon-border-color);
+    border-left: 6px solid var(--custom-admon-border-color);
+  }
+  
+  .admonition .admonition-title-custom {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 700;
+    color: var(--custom-admon-text-color);
+  }
+  
+  @media print {
+    .admonition .admonition-title:before {
+      display: none;
+    }
+  }
+  
+  /* Color Schemes */
+  .custom-amber-light-scheme {
+    --custom-admon-bg-color: #fef3c7;
+    --custom-admon-text-color: #92400e;
+    --custom-admon-border-color: #f59e0b;
+  }
+  
+  .custom-green-light-scheme {
+    --custom-admon-bg-color: #d1fae5;
+    --custom-admon-text-color: #065f46;
+    --custom-admon-border-color: #10b981;
+  }
+  
+  .custom-blue-light-scheme {
+    --custom-admon-bg-color: #bfdbfe;
+    --custom-admon-text-color: #1e3a8a;
+    --custom-admon-border-color: #3b82f6;
+  }
+  
+  .custom-red-light-scheme {
+    --custom-admon-bg-color: #fecaca;
+    --custom-admon-text-color: #7f1d1d;
+    --custom-admon-border-color: #ef4444;
+  }
