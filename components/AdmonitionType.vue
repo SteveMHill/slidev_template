@@ -1,7 +1,7 @@
-<!-- Source: https://github.com/gureckis/slidev-theme-neversink/blob/main/components/AdmonitionType.vue -->
-
 <script setup>
 import { computed } from 'vue'
+import { Icon } from '@iconify/vue'
+import '../styles/admonition.css'
 
 const props = defineProps({
   type: {
@@ -18,41 +18,57 @@ const admontype = computed(() => {
   switch (props.type) {
     case 'important':
       return {
-        icon: 'mdi-message-alert-outline',
         title: 'Important',
-        color: 'purple-light',
+        class: 'admonition important',
+        icon: 'mdi-alert-circle', // Iconify icon
       }
     case 'tip':
       return {
-        icon: 'mdi-lightbulb-outline',
         title: 'Tip',
-        color: 'emerald-light',
+        class: 'admonition tip',
+        icon: 'mdi-lightbulb-on-outline', // Iconify icon
       }
     case 'warning':
       return {
-        icon: 'mdi-alert-outline',
         title: 'Warning',
-        color: 'amber-light',
+        class: 'admonition warning',
+        icon: 'mdi-alert', // Iconify icon
       }
     case 'caution':
       return {
-        icon: 'mdi-alert-octagon-outline',
         title: 'Caution',
-        color: 'red-light',
+        class: 'admonition caution',
+        icon: 'mdi-alert-octagon', // Iconify icon
       }
     case 'info':
     default:
       return {
-        icon: 'mdi-information-variant-circle-outline',
         title: 'Note',
-        color: 'sky-light',
+        class: 'admonition info',
+        icon: 'mdi-information-outline', // Iconify icon
       }
   }
 })
 </script>
 
 <template>
-  <Admonition :title="admontype.title" :color="admontype.color" :icon="admontype.icon" :width="width">
+  <div :class="admontype.class" :style="{ width: width }">
+    <div class="admonition-header">
+      <Icon :icon="admontype.icon" class="admonition-icon" />
+      <strong>{{ admontype.title }}</strong>
+    </div>
     <slot></slot>
-  </Admonition>
+  </div>
 </template>
+
+<style scoped>
+.admonition-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admonition-icon {
+  font-size: 1.5rem;
+}
+</style>

@@ -11,7 +11,7 @@
 const author = $slidev.themeConfigs.author || ''
 
 // Access the themeConfig from $slidev
-const coverBackground = $slidev.themeConfigs.coverBackground || '../assets/page.png'
+const coverBackground = $slidev.themeConfigs.coverBackground || ''
 
 // Dynamically set the background style
 const backgroundStyle = {
