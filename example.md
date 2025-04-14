@@ -78,3 +78,46 @@ layout: default
     lineColor="#33c3ff"
     dotColor="#33c3ff"
 />
+
+---
+layout: default
+---
+
+# Interactive Poll
+
+  <InteractivePoll
+    question="What is your favorite programming language?"
+    :options="[
+      { text: 'JavaScript' },
+      { text: 'Python' },
+      { text: 'Java' },
+      { text: 'C++' }
+    ]"
+  />
+
+---
+layout: default
+---
+
+# Customizable Table
+
+<CustomTable
+  :headers="['Name', 'Age', 'Country']"
+  :rows="[
+    ['Alice', 25, 'USA'],
+    ['Bob', 30, 'UK'],
+    ['Charlie', 35, 'Canada']
+  ]"
+  striped
+  bordered
+  headerBgColor="#007acc"
+  headerTextColor="#ffffff"
+  rowHoverColor="#e0f7fa"
+  fontSize="1.2rem"
+  textAlign="center"
+  :rowColors="{ odd: '#f9f9f9', even: '#f9f9f9' }"
+  :cellAlignment="['left', 'center', 'right']"
+  :columnWidths="['30%', '20%', '50%']"
+  borderColor="#333"
+  fontFamily="'Courier New', monospace"
+/>
