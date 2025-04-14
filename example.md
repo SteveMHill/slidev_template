@@ -50,6 +50,16 @@ This is warning text
 This is my admon message
 </Admonition>
 
+---
+layout: default
+---
 
+# Quote
 
+<QuoteBlock
+  text="The only way to do great work is to love what you do."
+  author="Steve Jobs"
+  color="#2c3e50"
+  textColor="#ecf0f1"
+/>
 
