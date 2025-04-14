@@ -8,7 +8,7 @@ themeConfig:
   avatar: './assets/avatar.png'
   coverBackground: './assets/cover.png'
   backgroundImage: './assets/page.png'
-  showProgressBar: false
+  showProgressBar: true
 ---
 
 # Slidev Theme Starter
@@ -71,6 +71,8 @@ layout: default
     :events="[
       { title: 'Project Kickoff', date: '2025-01-01', description: 'The project officially started.' },
       { title: 'First Milestone', date: '2025-03-01', description: 'Completed the first milestone.' },
-      { title: 'Launch', date: '2025-06-01', description: 'The project was successfully launched.' }
+      { title: 'Launch', date: '2025-06-01', description: 'The project was successfully launched.' },
+      { title: 'Post-Launch Review', date: '2025-07-01', description: 'Reviewed the project outcomes and feedback.' },
+      { title: 'Future Planning', date: '2025-08-01', description: 'Started planning for the next phase.' }
     ]"
-  />
+/>
