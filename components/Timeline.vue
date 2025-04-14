@@ -2,7 +2,7 @@
   <div class="timeline-container">
     <div
       class="timeline"
-      :style="{ '--scale-factor': scaleFactor }"
+      :style="{ '--scale-factor': scaleFactor, '--line-color': lineColor, '--dot-color': dotColor }"
     >
       <div
         v-for="(event, index) in events"
@@ -29,6 +29,14 @@ const props = defineProps({
     required: true,
     default: () => [],
   },
+  lineColor: {
+    type: String,
+    default: '#007acc', // Default line color
+  },
+  dotColor: {
+    type: String,
+    default: '#007acc', // Default dot color
+  },
 })
 
 // Dynamically calculate the scale factor based on the number of events
@@ -51,7 +59,7 @@ const scaleFactor = computed(() => {
 /* Timeline styles */
 .timeline {
   position: relative;
-  border-left: calc(4px * var(--scale-factor, 1)) solid #007acc;
+  border-left: calc(4px * var(--scale-factor, 1)) solid var(--line-color, #007acc);
   padding-left: calc(1.5rem * var(--scale-factor, 1));
   height: 100%; /* Full height of the container */
   display: flex;
@@ -75,7 +83,7 @@ const scaleFactor = computed(() => {
   left: calc(-8px * var(--scale-factor, 1));
   width: calc(16px * var(--scale-factor, 1)); /* Scale dot size */
   height: calc(16px * var(--scale-factor, 1));
-  background-color: #007acc;
+  background-color: var(--dot-color, #007acc); /* Use custom dot color */
   border-radius: 50%;
   border: calc(2px * var(--scale-factor, 1)) solid white;
 }

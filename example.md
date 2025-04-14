@@ -75,4 +75,6 @@ layout: default
       { title: 'Post-Launch Review', date: '2025-07-01', description: 'Reviewed the project outcomes and feedback.' },
       { title: 'Future Planning', date: '2025-08-01', description: 'Started planning for the next phase.' }
     ]"
+    lineColor="#33c3ff"
+    dotColor="#33c3ff"
 />
