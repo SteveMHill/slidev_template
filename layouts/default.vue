@@ -2,11 +2,14 @@
   <div class="slidev-layout intro" :style="backgroundStyle">
     <div class="my-auto">
       <slot />
+      <ProgressBar />
     </div>
   </div>
 </template>
 
 <script setup>
+import ProgressBar from '../components/ProgressBar.vue'
+
 // Access the backgroundImage from slidev.themeConfigs
 const backgroundImage = $slidev.themeConfigs.backgroundImage || ''
 

@@ -8,6 +8,7 @@ themeConfig:
   avatar: './assets/avatar.png'
   coverBackground: './assets/cover.png'
   backgroundImage: './assets/page.png'
+  showProgressBar: false
 ---
 
 # Slidev Theme Starter
