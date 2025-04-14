@@ -63,3 +63,14 @@ layout: default
   textColor="#ecf0f1"
 />
 
+---
+layout: default
+---
+
+<Timeline
+    :events="[
+      { title: 'Project Kickoff', date: '2025-01-01', description: 'The project officially started.' },
+      { title: 'First Milestone', date: '2025-03-01', description: 'Completed the first milestone.' },
+      { title: 'Launch', date: '2025-06-01', description: 'The project was successfully launched.' }
+    ]"
+  />
